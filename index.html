@@ -1,242 +1,490 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UPModel
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Max McGill's Github</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="assets/css/main2.css" />
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#me">Who I am</a></li>
-							<li><a href="#projects">Projects</a></li>
-							<!-- <li><a href="#three">Get in touch</a></li> -->
-							<li><a href="#model">Model</a></li>
+</head>
+<body>
 
-						</ul>
-					</nav>
-				</div>
-			</section>
+<!-- ART DECO BACKGROUND -->
+<svg id="bg" viewBox="0 0 1200 900" preserveAspectRatio="none">
+    <g class="pattern" id="patternGroup" stroke="var(--accent)" fill="none" stroke-width="2" opacity="0.12">
+        <!-- Art Deco semicircles / sunburst -->
+        <g transform="translate(600,160)">
+            <path d="M-420,160 A420,420 0 0 1 420,160" />
+            <path d="M-320,160 A320,320 0 0 1 320,160" />
+            <path d="M-220,160 A220,220 0 0 1 220,160" />
+            <path d="M-120,160 A120,120 0 0 1 120,160" />
+        </g>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Max McGill's Portfolio</h1>
-							<p>A portfolio page dedicated to showcasing work that I have done.</a>.</p>
-							<ul class="actions">
-								<li><a href="#me" class="button scrolly">Learn More About Me</a></li>
-								<li><a href="#projects" class="button scrolly">Learn More About My Work</a></li>
-							</ul>
-						</div>
-					</section>
-					
-					<!-- Me -->
-					<section id="me" class="wrapper style2 spotlights">
-						<section>
-							<a href="#" class="image"><img src="images/missing.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>About Me</h2>
-									<h3>Brief</h3>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<div class="content">
-								<div class="inner">
-									<h3>Background</h3>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
-					
-					<!-- Projects -->
-					<section id="projects" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>Projects</h2>
-							<section>
-								<a href="#" class="image"><img src="images/misty.jpg" alt="" data-position="top center" /></a>
-								<div class="content">
-									<div class="inner">
-										<h2>Misty Robot</h2>
-										<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-										<ul class="actions">
-											<li><a href="misty.html" class="button">Learn more</a></li>
-										</ul>
-									</div>
-								</div>
-							</section>
-							<section>
-								<a href="#" class="image"><img src="images/stm.jpg" alt="" data-position="center center" /></a>
-								<div class="content">
-									<div class="inner">
-										<h2>Rollercoaster Automation</h2>
-										<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-										<ul class="actions">
-											<li><a href="stm.html" class="button">Learn more</a></li>
-										</ul>
-									</div>
-								</div>
-							</section>
-						</div>
-					</section>
+        <!-- Vertical stepped columns -->
+        <g>
+            <line x1="150" y1="220" x2="150" y2="820" />
+            <line x1="270" y1="260" x2="270" y2="760" />
+            <line x1="390" y1="300" x2="390" y2="700" />
+            <line x1="810" y1="300" x2="810" y2="700" />
+            <line x1="930" y1="260" x2="930" y2="760" />
+            <line x1="1050" y1="220" x2="1050" y2="820" />
+        </g>
+
+        <!-- Diamond motifs -->
+        <g>
+            <polygon points="600,320 640,360 600,400 560,360" />
+            <polygon points="600,420 660,480 600,540 540,480" opacity="0.08" />
+        </g>
+    </g>
+</svg>
+
+<!-- scroll indicators -->
+<div class="scroll-indicator up" aria-hidden="true">▲</div>
+<div class="scroll-indicator down" aria-hidden="true">▼</div>
+
+<!-- ACCESSIBILITY -->
+<div class="accessibility-wrapper">
+    <button class="accessibility-btn" onclick="toggleAccessibility()" aria-label="Accessibility options">📖</button>
+    <div class="accessibility-panel" id="accessPanel">
+        <button class="icon-btn" onclick="toggleClass('high-contrast')" aria-label="Toggle High Contrast" data-tooltip="High Contrast">🔲</button>
+        <button class="icon-btn" onclick="toggleClass('large-text')" aria-label="Toggle Large Text" data-tooltip="Large Text">🔤</button>
+        <div class="highlight-selector">
+            <button class="icon-btn highlight-btn" onclick="toggleHighlightPanel()" aria-label="Text highlight colors" data-tooltip="Text Highlight">🖍️</button>
+            <div class="highlight-panel" id="highlightPanel">
+                <button class="color-option yellow" onclick="setHighlightColor('yellow')" title="Yellow"></button>
+                <button class="color-option lightgreen" onclick="setHighlightColor('lightgreen')" title="Light Green"></button>
+                <button class="color-option darkgreen" onclick="setHighlightColor('darkgreen')" title="Dark Green"></button>
+                <button class="color-option purple" onclick="setHighlightColor('purple')" title="Purple"></button>
+                <button class="color-option lightblue" onclick="setHighlightColor('lightblue')" title="Light Blue"></button>
+                <button class="color-option none" onclick="setHighlightColor('')" title="None" style="border-style:dashed;">×</button>
+            </div>
+        </div>
+        <button class="icon-btn" onclick="toggleClass('reduce-motion')" aria-label="Toggle Reduce Motion" data-tooltip="Reduce Motion">⏸️</button>
+        <button class="icon-btn" onclick="resetAccessibility()" aria-label="Reset preferences" data-tooltip="Reset">🗘</button>
+        <button class="icon-btn" onclick="resetAccessibility()" aria-label="Reset preferences" data-tooltip="Reset">🗘</button>
+    
+    </div>
+</div>
+
+<!-- NAV -->
+<div class="nav-container">
+    <nav>
+        <svg class="deco" viewBox="0 0 100 50">
+            <path d="M0 50 L50 0 L100 50"/>
+        </svg>
+
+        <a href="#home">Home</a>
+        <a href="#projects">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+
+        <div class="theme-selector" style="position:relative;">
+            <button class="icon-btn theme-btn" onclick="toggleThemePanel()" aria-label="Theme options">🎨</button>
+            <div class="theme-panel" id="themePanel">
+                <button class="color-option dark" onclick="changeTheme('dark')" title="Dark"></button>
+                <button class="color-option green" onclick="changeTheme('green')" title="Green"></button>
+                <button class="color-option light" onclick="changeTheme('light')" title="Light"></button>
+            </div>
+        </div>
+
+        <svg class="deco" viewBox="0 0 100 50">
+            <path d="M0 50 L50 0 L100 50"/>
+        </svg>
+    </nav>
+</div>
 
 
-					<!-- Projects -->
-					<!-- <section id="projects" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>Projects</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Lorem ipsum amet</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-lock"></span>
-									<h3>Aliquam sed nullam</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Sed erat ullam corper</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>Veroeros quis lorem</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>Urna quis bibendum</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>Aliquam urna dapibus</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-							</div>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
-							</ul>
-						</div>
-					</section> -->
-					
-					<!-- Three -->
-					<!-- <section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-							<div class="split style1">
-								<section>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<span>12345 Somewhere Road #654<br />
-												Nashville, TN 00000-0000<br />
-												USA</span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="#">user@untitled.tld</a>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>(000) 000-0000</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-												<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
-					
-					</div> -->
-					
-					<!-- Model -->
-					<section id="model" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Model</h1>
-							<script src="https://embed.github.com/view/3d/PrincessMaximoos/PrincessMaximoos.github.io/main/models/Gear1.stl?height=438&width=device-width"></script>
-						</div>
-					</section>
-				</div>
-					
-					<!-- Footer -->
-					<!-- <footer id="footer" class="wrapper style1-alt">
-						<div class="inner">
-							<ul class="menu">
-								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer> -->
-					
-					<!-- Scripts -->
-					<script src="assets/js/jquery.min.js"></script>
-					<script src="assets/js/jquery.scrollex.min.js"></script>
-					<script src="assets/js/jquery.scrolly.min.js"></script>
-					<script src="assets/js/browser.min.js"></script>
-					<script src="assets/js/breakpoints.min.js"></script>
-					<script src="assets/js/util.js"></script>
-					<script src="assets/js/main.js"></script>
-					
-				</body>
-				
-				</html>
-				
-				
-				
+
+<section id="home">
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; text-align: center;">
+        <h1>Max McGill</h1>
+        <p>Software Developer, Robotics Engineer</p>
+        <div class = "home-buttons">
+            <button class="cta-btn" onclick="location.href='#projects'">View Work</button>
+            <button class="cta-btn" onclick="location.href='#about'">About me</button>
+            <button class="cta-btn" onclick="location.href='#contact'">Get in Touch</button>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Work</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h2>Misty Robot</h2>
+            <span class="image left"><img src="images/misty.jpg" width = 300px/></span>
+            <h2>Overview</h2>
+            <p>Misty is a multi-functional pre-built robot that I have been programming to achieve multiple objectives:</p>
+            <ul>
+                <li>1 | Receptionist - I have created a program that allows Misty to use her camera to identify QR codes, answer questions from guests, and check guests into a database.</li>
+                <li>2 | Following People - Using the example programs, Misty is capable of detecting and following people whether that's by driving towards them or just turning in place so she can see them.</li>
+            </ul>
+            <p>Misty has been presented at two events within Newcastle, where this program was shown-off as well as her other capabilities as provided by the example programs from her manufacturer.</p>
+
+            <h2>Features</h2>
+            <ul>
+                <li>QR Code Detection and Reading</li>
+                <li>GPT-Based Text Synthesis</li>
+                <li>Text-to-Speech</li>
+                <li>Speech-to-Text</li>
+                <li>Following Humans</li>
+            </ul>
+        </div>
+        <div class="project-card">
+            <h2>Roller Coaster Automation</h2>
+            <span><img src="images/stm.jpg" width = 300px/></span>
+            <p>This project involved automating a roller coaster ride using a combination of sensors, actuators, and control systems. The goal was to create a seamless and safe experience for riders while optimizing the ride's performance.</p>
+            <p>An STM microcontroller was used to monitor and control the braking system so that is safe for users. It allows a user to input physical parameters such as weight, speed, brake force, brake time, and pulse distance through a serial terminal during startup. These values are stored and used by the system to simulate or manage braking behaviour. The system operates using a structured state machine, ensuring the device moves through defined operating modes such as initial setup, manual control, automatic operation, and safe mode.</p>
+        </div>
+        <div class="project-card" style ="grid-column: span 2;">
+            <h2>Storyboard</h2>
+            <h3>Brief</h3>
+            <p>Storyboard is a work in progress project that I have been working on to create a game engine capable of rendering and animating 3D scenes in real-time. The engine is built using C and Vulkan, and it supports features such as lighting, shadows, and texture mapping.</p>
+            
+            <h3>Overview</h3>
+            <p>Storyboard is designed to be a flexible and powerful tool for game developers, allowing them to create complex and immersive gaming experiences. The engine is built on top of the Vulkan API, which provides low-level access to the GPU and allows for high-performance rendering.</p>
+            <p>C was chosen for its performance and low-level control over system resources as well as my familiarity and enjoyment of it.</p>
+            
+            <h3>Spec</h3>
+            <ul>
+                <li>Real-Time 3D Rendering</li>
+                <li>Lighting and Shadows</li>
+                <li>Texture Mapping</li>
+                <li>Cross-Platform Support</li>
+                <ul>
+                    <li>Windows</li>
+                    <li>Linux</li>
+                </ul>
+                <li>Modular Architecture</li>
+                <ul>
+                    <li>Custom Scripts for game logic so that different genres and styles of games can be created.</li>
+                </ul>
+            </ul>
+
+        </div>
+        <!-- <div class="project-card">
+            <h2>Robotic Drone Skins Module</h2>
+            <span class="image left"><img src="images/Soapomorph.png" width = 300px/></span>
+            
+            
+            
+        </div> -->
+    </div>
+</section>
+
+<section id="about">
+    <div class="about-content">
+        <div class="about-text">
+            <h2>About</h2>
+            <!-- <p>Anglin the Trigonometry. Structure. Elegance.</p> -->
+            <p>Hi, my name is Max McGill. I am a software developer and engineer with a passion for Robotics.</p>
+            <div class="about-images">
+                <img src="images/github.png" alt="GitHub" width="100" />
+                <img src="images/frog.png" alt="Frog" width="100" />
+            </div>
+            <div class="about-text">
+                <h3>Education</h3> 
+                <ul>
+                    <li>Distinction in Engineering - Newcastle Stafford College Group (NSCG)</li>
+                    <li>Expected First in BSc AI and Robotics - Staffordshire Uni (Stoke)</li>
+                </ul>
+                <h3>Certifications</h3> 
+                <ul>
+                    <li>Microsoft Azure AI Fundamentals</li>
+                    <li>Amazon Web Services (AWS)</li>
+                </ul>
+            </div>
+            <p style="padding-top: 45%;"></p>
+            <h3>Skills</h3>
+            <div class="skills-grid">
+                <div class="project-card">
+                    <h4>Programming Languages</h4>
+                    <ul>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>C#</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <h4>Frameworks &amp; Tools</h4>
+                    <ul>
+                        <li>Vulkan</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <h4>Areas of Expertise</h4>
+                    <ul>
+                        <li>Robotics</li>
+                        <li>Software Engineering</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <h4>Soft Skills</h4>
+                    <ul>
+                        <li>Problem Solving</li>
+                        <li>Adaptability</li>
+                        <li>Teamwork</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <h4>Engineering</h4>
+                    <ul>
+                        <li>Mechanical Engineering</li>
+                        <li>Civil Engineering</li>
+                        <li>Electrical Engineering</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <h4>Software Development</h4>
+                    <ul>
+                        <li>Object-Oriented Programming</li>
+                        <li>Software Design Patterns</li>
+                        <li>Version Control</li>
+                        <li>Agile Methodologies</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <h4>Robotics</h4>
+                    <ul>
+                        <li>Sensor Integration</li>
+                        <li>Actuator Control</li>
+                        <li>Computer Vision</li>
+                        <li>Path Planning</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <h4>Operating Systems</h4>
+                    <ul>
+                        <li>Windows</li>
+                        <li>Linux</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <h4>AI</h4>
+                    <ul>
+                        <li>Machine Learning</li>
+                        <li>Reinforcement Learning</li>
+                        <li>Natural Language Processing</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <h4>Technical Skills</h4>
+                    <ul>
+                        <li>AutoCAD</li>
+                        <li>Soldering</li>
+                        <li>Mechanics</li>
+                        <li>Electronics</li>
+                        <li>Product Design</li>
+                        <li>Business</li>
+                        <li>Project Management</li>
+                        <li>Team Management</li>
+                        <li>Design</li>
+                        <li>Computer-Aided Design (CAD)</li>
+                        <li>Embedded System Programming</li>
+                        <li>AI</li>
+                        <li>Reinforcement Learning</li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Interests</h3>
+            <ul>
+                <li>Robotics</li>
+                <li>Game Development</li>
+                <li>AI and Machine Learning</li>
+                <li>Open Source Software</li>
+                <li>Electronic Hardware</li>
+            </ul>
+            <p style="padding-top: 10%;">An example of a project that I am currently working on is a robotic arm. This originated as a hobby of mine which I was able to pursue further in my studies as a final year project. Not only did this allow me to expand my available resources and refine my knowledge, but it required plenty of the skills I have developed over the past 7 years. This included my ability to problem solve and my in-depth understanding of software development interlinked with mechanical engineering. When combined, this produced a design that is functional, budget friendly with simple assembly without sacrificing dexterity or mobility.</p>
+            <p>Having started this project a few years ago, it required me to adapt and learn to use different resources and tools that I had little experience in. Programming in C++ and 3D modelling were two of the skills that I learnt in order to help achieve my end goal. Overall, pushing myself to complete this project lead me from basic knowledge to a much greater understanding, not only of the resources I use to develop my ideas into reality, but also of my ability to adapt and learn skills necessary for whatever I am faced with. </p>
+        </div>
+        
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: max.mcgill.speaking@outlook.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/max-mcgill">Max McGill </a></p>
+    <p>GitHub: <a href="https://github.com/KasuranCodes">KasuranCodes</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/max.mcgill.nexus/">max.mcgill.nexus</a></p>
+</section>
+
+<!-- Footer (imported from index.html) -->
+<footer id="footer" class="wrapper alt">
+    <div class="inner">
+        <ul class="icons">
+            <li>&copy; Max McGill. All rights reserved.</li>
+            <ul class="icons">
+                <li>Come Shiver my Timbers [</li>
+                <li>
+                    <a href="https://www.linkedin.com/in/max-mcgill" class="icon" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7 0h4.8v2.2h.1c.7-1.3 2.4-2.7 5-2.7C23.5 7.5 24 11 24 15.2V24h-5v-8.2c0-2-0.8-3.3-2.7-3.3-1.5 0-2.4 1-2.8 2v9.5h-5V8z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/max.mcgill.nexus/" class="icon" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.3.4.6.3 1 .6 1.4 1 .4.4.7.8 1 1.4.2.4.3 1.1.4 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.3-.3.6-.6 1-1 1.4-.4.4-.8.7-1.4 1-.4.2-1.1.3-2.3.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.3-.4-.6-.3-1-.6-1.4-1-.4-.4-.7-.8-1-1.4-.2-.4-.3-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.3.3-.6.6-1 1-1.4.4-.4.8-.7 1.4-1 .4-.2 1.1-.3 2.3-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.5a6.3 6.3 0 1 0 .001 12.6A6.3 6.3 0 0 0 12 5.7zm0 10.4a4.1 4.1 0 1 1 0-8.2 4.1 4.1 0 0 1 0 8.2zm6.4-11.7a1.46 1.46 0 1 1-2.92 0 1.46 1.46 0 0 1 2.92 0z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/KasuranCodes" class="icon" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.38-3.88-1.38-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.69 0-1.26.45-2.29 1.2-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.99.01 1.99.13 2.92.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.11 3.06.75.8 1.2 1.83 1.2 3.09 0 4.42-2.7 5.4-5.28 5.68.42.36.79 1.08.79 2.18 0 1.58-.01 2.85-.01 3.24 0 .31.21.68.8.56C20.71 21.38 24 17.08 24 12c0-6.35-5.15-11.5-12-11.5z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>]</li>
+            </ul>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>
+<script>
+
+/* ===================== */
+/* BACKGROUND GRID */
+/* ===================== */
+
+const patternGroup = document.getElementById("patternGroup");
+
+for (let i = 0; i < window.innerWidth; i += 80) {
+    let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", i);
+    line.setAttribute("y1", 0);
+    line.setAttribute("x2", i);
+    line.setAttribute("y2", window.innerHeight);
+    patternGroup.appendChild(line);
+}
+
+for (let i = 0; i < window.innerHeight; i += 80) {
+    let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", 0);
+    line.setAttribute("y1", i);
+    line.setAttribute("x2", window.innerWidth);
+    line.setAttribute("y2", i);
+    patternGroup.appendChild(line);
+}
+
+// Keep mouse and scroll offsets separate and combine them to avoid snapping
+let pgOffsetX = 0;
+let pgOffsetY = 0;
+let pgScrollY = 0;
+
+function setPatternTransform() {
+    // combine mouse offsets and scroll offset
+    const tx = pgOffsetX;
+    const ty = pgOffsetY + pgScrollY;
+    patternGroup.setAttribute("transform", `translate(${tx},${ty})`);
+}
+
+document.addEventListener("mousemove", e => {
+    pgOffsetX = (e.clientX / window.innerWidth - 0.5) * 30;
+    pgOffsetY = (e.clientY / window.innerHeight - 0.5) * 30;
+    setPatternTransform();
+});
+
+window.addEventListener("scroll", () => {
+    pgScrollY = window.scrollY * 0.05;
+    setPatternTransform();
+});
+
+/* ===================== */
+/* THEME */
+/* ===================== */
+
+function changeTheme(theme) {
+    // remove any theme classes
+    document.body.classList.remove("light", "green");
+    if (theme === "light") document.body.classList.add("light");
+    if (theme === "green") document.body.classList.add("green");
+    // collapse dropdown after selection
+    document.getElementById('themePanel').classList.remove('open');
+}
+
+function toggleThemePanel() {
+    document.getElementById('themePanel').classList.toggle('open');
+}
+
+/* ===================== */
+/* ACCESSIBILITY */
+/* ===================== */
+
+function toggleAccessibility() {
+    const panel = document.getElementById("accessPanel");
+    panel.classList.toggle('open');
+}
+
+function toggleClass(className) {
+    document.body.classList.toggle(className);
+}
+
+function setHighlightColor(color) {
+    const classes = ['highlight-yellow','highlight-lightgreen','highlight-darkgreen','highlight-purple','highlight-lightblue'];
+    document.body.classList.remove(...classes);
+    if (color) {
+        document.body.classList.add('highlight-' + color);
+    }
+    // close panel
+    document.getElementById('highlightPanel').classList.remove('open');
+}
+
+function toggleHighlightPanel() {
+    document.getElementById('highlightPanel').classList.toggle('open');
+}
+
+function resetAccessibility() {
+    document.body.classList.remove(
+        "high-contrast",
+        "large-text",
+        "reduce-motion",
+        "highlight-yellow",
+        "highlight-lightgreen",
+        "highlight-darkgreen",
+        "highlight-purple",
+        "highlight-lightblue"
+    );
+    const selector = document.getElementById('highlightColor');
+    if(selector) selector.value = '';
+}
+
+/* ===================== */
+/* SECTION ANIMATION */
+/* ===================== */
+
+// scroll indicators logic
+const upIndicator = document.querySelector('.scroll-indicator.up');
+const downIndicator = document.querySelector('.scroll-indicator.down');
+
+function updateScrollIndicators() {
+    const atTop = window.scrollY <= 0;
+    const atBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight - 2;
+    upIndicator.classList.toggle('visible', !atTop);
+    downIndicator.classList.toggle('visible', !atBottom);
+}
+
+window.addEventListener('scroll', updateScrollIndicators);
+window.addEventListener('resize', updateScrollIndicators);
+// initial
+updateScrollIndicators();
+
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("show");
+    });
+}, { threshold: 0.2 });
+
+sections.forEach(section => observer.observe(section));
+
+</script>
+

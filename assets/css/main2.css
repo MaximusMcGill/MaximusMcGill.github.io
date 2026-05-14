@@ -1,0 +1,466 @@
+
+/* ===================== */
+/* THEME VARIABLES */
+/* ===================== */
+
+:root {
+    --bg: #0e0e0e;
+    --text: #f5f5f5;
+    --nav-bg: rgba(20,20,20,0.6);
+    --card-bg: #1b1b1b;
+    --accent: #d4af37;
+    --font-size: 16px;
+    --text-highlight: transparent;
+}
+
+body {
+    margin: 0;
+    font-family: "Courier New", monospace;
+    background: var(--bg);
+    color: var(--text);
+    font-size: var(--font-size);
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* LIGHT THEME */
+body.light {
+    --bg: #f4f1eb;
+    --text: #111;
+    --nav-bg: rgba(255,255,255,0.6);
+    --card-bg: #ffffff;
+    --accent: #111;
+}
+
+/* GREEN THEME (from index.html) */
+body.green {
+    --bg: #344033;
+    --text: #f5f5f5;
+    --nav-bg: rgba(52,64,51,0.6);
+    --card-bg: #2b332b;
+    --accent: #7fb069;
+}
+
+/* ACCESSIBILITY STATES */
+
+body.high-contrast {
+    --bg: #000;
+    --text: #fff;
+    --accent: #0ff;
+}
+
+body.large-text {
+    --font-size: 20px;
+}
+
+body.text-highlight p,
+body.text-highlight h1,
+body.text-highlight h2 {
+    background: yellow;
+    padding: 4px;
+}
+body.highlight-lightgreen p,
+body.highlight-lightgreen h1,
+body.highlight-lightgreen h2 {
+    background: lightgreen;
+    padding: 4px;
+}
+body.highlight-darkgreen p,
+body.highlight-darkgreen h1,
+body.highlight-darkgreen h2 {
+    background: darkgreen;
+    padding: 4px;
+}
+body.highlight-purple p,
+body.highlight-purple h1,
+body.highlight-purple h2 {
+    background: purple;
+    padding: 4px;
+}
+body.highlight-lightblue p,
+body.highlight-lightblue h1,
+body.highlight-lightblue h2 {
+    background: lightblue;
+    padding: 4px;
+}
+
+body.reduce-motion * {
+    transition: none !important;
+    animation: none !important;
+}
+
+/* ===================== */
+/* ART DECO BACKGROUND */
+/* ===================== */
+
+#bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.pattern line {
+    stroke: var(--accent);
+    stroke-width: 1;
+    opacity: 0.15;
+}
+
+/* ===================== */
+/* NAVIGATION */
+/* ===================== */
+
+.nav-container {
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    font-size: medium;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 18px 10px;
+    border-radius: 60px;
+    backdrop-filter: blur(15px);
+    background: var(--nav-bg);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.deco {
+    width: 80px;
+    height: 40px;
+    stroke: var(--accent);
+    fill: none;
+    stroke-width: 2;
+}
+
+/* ===================== */
+/* ACCESSIBILITY BUTTON */
+/* ===================== */
+
+.accessibility-wrapper {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2000;
+}
+
+.accessibility-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    background: var(--nav-bg);
+    color: var(--text);
+    font-size: 20px;
+    cursor: pointer;
+    position: relative; 
+    z-index: 9999;
+}
+/* THEME ICON & PANEL */
+.theme-selector { display: inline-block; position: relative; }
+.icon-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    background: var(--nav-bg);
+    color: var(--text);
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.icon-btn:hover { transform: scale(1.1); }
+
+.theme-panel {
+    position: absolute;
+    top: 48px; /* start just below button border */
+    right: 0;
+    background: var(--card-bg);
+    border-radius: 10px 10px 30px 30px;
+    overflow: hidden;
+    width: 50px; /* same as button width */
+    height: 0;
+    transition: height 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0; /* remove padding when closed so it's fully hidden */
+    pointer-events: none;
+    z-index: 9998; /* keep panel under the button */
+    transition: height 0.3s ease, padding 0.3s ease;
+
+}
+.theme-panel.open { height: auto; padding: 10px 0; pointer-events: auto; }
+
+.theme-btn { position: relative; z-index: 9999; }
+
+.theme-panel .color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    cursor: pointer;
+    margin: 0 auto;
+    transition: height 0.3s ease, padding 0.3s ease;
+
+}
+.theme-panel .color-option.dark { background: #111; }
+.theme-panel .color-option.light { background: #fff; }
+.theme-panel .color-option:hover { transform: scale(1.1); }
+.theme-panel .color-option.green { background: #344033; }
+
+/* HIGHLIGHT SELECTOR & PANEL */
+.highlight-selector { position: relative; display: inline-block; }
+.highlight-panel {
+    position: absolute;
+    /* center vertically relative to the icon button */
+    top: 50%;
+    transform: translateY(-50%);
+    right: 48px; /* slide out left of the button */
+    background: var(--card-bg);
+    border-radius: 30px 10px 10px 30px;
+    overflow: hidden;
+    width: 0;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* vertically centre children */
+    gap: 8px;
+    padding: 0;
+    pointer-events: none;
+    z-index: 9998;
+    transition: height 0.3s ease, padding 0.3s ease;
+    
+}
+.highlight-panel.open { width: 220px; padding: 0 6px; pointer-events: auto;height : 50px;}
+.highlight-btn { position: relative; z-index: 9999; }
+
+.highlight-panel .color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    cursor: pointer;
+    margin: 0 auto;
+}
+.highlight-panel .color-option.yellow { background: yellow; }
+.highlight-panel .color-option.lightgreen { background: lightgreen; }
+.highlight-panel .color-option.darkgreen { background: darkgreen; }
+.highlight-panel .color-option.purple { background: purple; }
+.highlight-panel .color-option.lightblue { background: lightblue; }
+.highlight-panel .color-option.none { background: transparent; }
+.highlight-panel .color-option:hover { transform: scale(1.1); }
+
+.accessibility-panel {
+    position: absolute;
+    top: 48px; /* start just below button border */
+    right: 0;
+    background: var(--card-bg);
+    border-radius: 10px 10px 30px 30px;
+    overflow: hidden;
+    width: 50px; /* same as button width */
+    height: 0;
+    transition: height 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0; /* remove padding when closed so it's fully hidden */
+    pointer-events: none;
+    z-index: 9998; /* keep panel under the button */
+    transition: height 0.3s ease, padding 0.3s ease;
+    margin: 0 auto;
+    
+}
+
+    
+.accessibility-panel.open { height: auto; padding: 10px 0; pointer-events: auto; overflow: visible; margin: 0 auto;}
+
+
+.accessibility-panel .icon-btn {
+    /* make each option a neat circle like the toolbar buttons */
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin: 0 auto;
+
+    
+
+}
+
+.accessibility-panel button:not(.icon-btn) {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    background: none;
+    border: 2px solid var(--accent);
+    color: var(--text);
+    cursor: pointer;
+    border-radius: 50%;
+    
+
+}
+
+.accessibility-panel button:not(.icon-btn):hover {
+    background: rgba(212, 175, 55, 0.1);
+}
+
+#accessPanel > .icon-btn {
+    transition: all 0.2s;
+    position: relative;
+}
+
+#accessPanel > .icon-btn:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    /* place to left of panel, centered vertically */
+    right: calc(100% + 8px);
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--accent);
+    color: var(--bg);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 9999; /* ensure tooltip always in front */
+    pointer-events: none;
+}
+
+/* Active state for toggled buttons */
+body.high-contrast #accessPanel > .icon-btn:nth-child(1),
+body.large-text #accessPanel > .icon-btn:nth-child(2),
+body.reduce-motion #accessPanel > .icon-btn:nth-child(4) {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* Reset button spacing */
+#accessPanel > button:last-child {
+    margin-top: 8px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* global list spacing */
+li {
+    padding-top: 10px;
+}
+
+/* ===================== */
+/* SECTIONS */
+/* ===================== */
+
+section {
+    padding: 120px 10%;
+    min-height: 100vh;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 25px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    padding: 30px;
+    background: var(--card-bg);
+    border-radius: 20px;
+}
+
+.cta-btn {
+    padding: 10px 20px;
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* scroll indicators */
+.scroll-indicator {
+    position: fixed;
+    bottom: 10px;
+    font-size: 24px;
+    color: var(--text);
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+    z-index: 3000;
+}
+.scroll-indicator.up { left: 40%; }
+.scroll-indicator.down { right: 40%; }
+.scroll-indicator.visible { opacity: 0.7; }
+
+/* about section images */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.about-images {
+    display: flex;
+    gap: 20px; /* space between icons */
+}
+.about-images img {
+    display: block;
+    /* roughly three times previous baseline (was 15vw max) */
+    max-width: 45vw;
+    min-width: 180px;
+    height: auto;
+}
+
+/* Footer / icons: remove bullets and show inline */
+.icons { list-style: none; margin: 0; padding: 0; }
+.icons > li { display: inline-block; margin-right: 10px; vertical-align: middle; }
+.icons li .label { display: none; }
+.icons a.icon { color: var(--text); text-decoration: none; }
+
+/* responsive tweaks */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: row;
+        gap: 12px;
+        padding: 12px 20px;
+    }
+    .nav-container {
+        top: 10px;
+    }
+
+
+    .deco {
+        width: 60px;
+        height: 30px;
+    }
+    .scroll-indicator.up { left: 20%; }
+    .scroll-indicator.down { right: 20%; }
+    section { padding: 80px 5%; }
+}
