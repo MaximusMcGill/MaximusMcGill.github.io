@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="assets/css/main2.css" />
+
+<!-- Hexagon window style -->
+<link rel="stylesheet" href="assets/css/hexagon-window.css" />
+
+</head>
+<body>
+
+<!-- ART DECO BACKGROUND -->
+<svg id="bg" viewBox="0 0 1200 900" preserveAspectRatio="none">
+    <g class="pattern" id="patternGroup" stroke="var(--accent)" fill="none" stroke-width="2" opacity="0.12">
+        <!-- Art Deco semicircles / sunburst -->
+        <g transform="translate(600,160)">
+            <path d="M-420,160 A420,420 0 0 1 420,160" />
+            <path d="M-320,160 A320,320 0 0 1 320,160" />
+            <path d="M-220,160 A220,220 0 0 1 220,160" />
+            <path d="M-120,160 A120,120 0 0 1 120,160" />
+        </g>
+
+        <!-- Vertical stepped columns -->
+        <g>
+            <line x1="150" y1="220" x2="150" y2="820" />
+            <line x1="270" y1="260" x2="270" y2="760" />
+            <line x1="390" y1="300" x2="390" y2="700" />
+            <line x1="810" y1="300" x2="810" y2="700" />
+            <line x1="930" y1="260" x2="930" y2="760" />
+            <line x1="1050" y1="220" x2="1050" y2="820" />
+        </g>
+
+        <!-- Diamond motifs -->
+        <g>
+            <polygon points="600,320 640,360 600,400 560,360" />
+            <polygon points="600,420 660,480 600,540 540,480" opacity="0.08" />
+        </g>
+    </g>
+</svg>
+
+<!-- scroll indicators -->
+<div class="scroll-indicator up" aria-hidden="true">▲</div>
+<div class="scroll-indicator down" aria-hidden="true">▼</div>
+
+<!-- NAV -->
+<div class="nav-container">
+    <nav>
+        <svg class="deco" viewBox="0 0 100 50">
+            <path d="M0 50 L50 0 L100 50"/>
+        </svg>
+
+        <a href="#home">Home</a>
+        <a href="#introduction">Introduction</a>
+        <a href="#conclusion">Conclusion</a>
+        <a href="#references">References</a>
+        <a href="#appendix">Appendix</a>
+
+        <div class="theme-selector" style="position:relative;">
+            <button class="icon-btn theme-btn" onclick="toggleThemePanel()" aria-label="Theme options">🎨</button>
+            <div class="theme-panel" id="themePanel">
+                <button class="color-option dark" onclick="changeTheme('dark')" title="Dark"></button>
+                <button class="color-option green" onclick="changeTheme('green')" title="Green"></button>
+                <button class="color-option light" onclick="changeTheme('light')" title="Light"></button>
+            </div>
+        </div>
+
+        <svg class="deco" viewBox="0 0 100 50">
+            <path d="M0 50 L50 0 L100 50"/>
+        </svg>
+    </nav>
+</div>
+
+
+
+<section id="home">
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; text-align: center;">
+        <div style="position: relative; width: 10%; display: flex; flex-direction: column; align-items: center;">
+            <div class="hexagon-window">
+                <img src="images/Soapomorph2.png" alt="Soapamorph 2" />
+            </div>
+            <h1 style="position: relative; z-index: 1;">Soapamorph</h1>
+        </div>
+        <p>Max McGill</p>
+        <h4>Contents</h4>
+        <div class = "home-buttons">
+            <button class="cta-btn" onclick="location.href='#introduction'">Introduction</button>
+            <button class="cta-btn" onclick="location.href='#development'">Development</button>
+            <button class="cta-btn" onclick="location.href='#management'">Management</button>
+            <button class="cta-btn" onclick="location.href='#critic'">Critical Analysis</button>
+            <button class="cta-btn" onclick="location.href='#reflection'">Reflection</button>
+            <button class="cta-btn" onclick="location.href='#conclusion'">Conclusion</button>
+            <button class="cta-btn" onclick="location.href='#references'">References</button>
+            <button class="cta-btn" onclick="location.href='#appendix'">Appendix
+
+
+        
+        </div>
+    </div>
+</section>
+
+<section id="introduction">
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; text-align: center;">
+        <h2>Introduction</h2>
+        <h3>Project Background</h3>
+        <h3>Aim</h3>
+        <h3>Objectives</h3>
+        <h3>Scope and Restraints</h3>
+    </div>
+</section>
+
+<section id="development">
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; text-align: center;">
+        <h2>Product Development</h2>
+        <h3>Concept</h3>
+        <h3>Prototyping</h3>
+        <script src="https://embed.github.com/view/3d/MaximusMcGill/MaximusMcGill.github.io/main/models/MechanismV7.stl?height=438&width=device-width"></script>
+    
+    </div>
+</section>
+
+<section id="management">
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; text-align: center;">
+        <h2>Project Management</h2>
+        <h3>Team Roles</h3>
+        <h3>Problem Solving</h3>
+    </div>
+</section>
+
+<section id="critic">
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; text-align: center;">
+        <h2>Critical Analysis of Prototyping Techniques</h2>
+        <h3>CAD Software</h3>
+        <h3>3D Printing</h3>
+        <h3>Scanning/Sculpting</h3>
+        <h3>Comparison</h3>
+    </div>
+</section>
+
+<section id="reflection">
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; text-align: center;">
+        <h2>Reflection and Improvements</h2>
+
+    </div>
+</section>
+
+<section id="conclusion">
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; text-align: center;">
+        <h2>Conclusion</h2>
+
+    </div>
+</section>
+
+
+<!-- Footer (imported from index.html) -->
+<footer id="footer" class="wrapper alt">
+    <div class="inner">
+        <ul class="icons">
+            <li>&copy; Max McGill. All rights reserved.</li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>
+<script>
+
+/* ===================== */
+/* BACKGROUND GRID */
+/* ===================== */
+
+const patternGroup = document.getElementById("patternGroup");
+
+for (let i = 0; i < window.innerWidth; i += 80) {
+    let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", i);
+    line.setAttribute("y1", 0);
+    line.setAttribute("x2", i);
+    line.setAttribute("y2", window.innerHeight);
+    patternGroup.appendChild(line);
+}
+
+for (let i = 0; i < window.innerHeight; i += 80) {
+    let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", 0);
+    line.setAttribute("y1", i);
+    line.setAttribute("x2", window.innerWidth);
+    line.setAttribute("y2", i);
+    patternGroup.appendChild(line);
+}
+
+// Keep mouse and scroll offsets separate and combine them to avoid snapping
+let pgOffsetX = 0;
+let pgOffsetY = 0;
+let pgScrollY = 0;
+
+function setPatternTransform() {
+    // combine mouse offsets and scroll offset
+    const tx = pgOffsetX;
+    const ty = pgOffsetY + pgScrollY;
+    patternGroup.setAttribute("transform", `translate(${tx},${ty})`);
+}
+
+document.addEventListener("mousemove", e => {
+    pgOffsetX = (e.clientX / window.innerWidth - 0.5) * 30;
+    pgOffsetY = (e.clientY / window.innerHeight - 0.5) * 30;
+    setPatternTransform();
+});
+
+window.addEventListener("scroll", () => {
+    pgScrollY = window.scrollY * 0.05;
+    setPatternTransform();
+});
+
+/* ===================== */
+/* THEME */
+/* ===================== */
+
+function changeTheme(theme) {
+    // remove any theme classes
+    document.body.classList.remove("light", "green");
+    if (theme === "light") document.body.classList.add("light");
+    if (theme === "green") document.body.classList.add("green");
+    // collapse dropdown after selection
+    document.getElementById('themePanel').classList.remove('open');
+}
+
+function toggleThemePanel() {
+    document.getElementById('themePanel').classList.toggle('open');
+}
+
+/* ===================== */
+/* ACCESSIBILITY */
+/* ===================== */
+
+function toggleAccessibility() {
+    const panel = document.getElementById("accessPanel");
+    panel.classList.toggle('open');
+}
+
+function toggleClass(className) {
+    document.body.classList.toggle(className);
+}
+
+function setHighlightColor(color) {
+    const classes = ['highlight-yellow','highlight-lightgreen','highlight-darkgreen','highlight-purple','highlight-lightblue'];
+    document.body.classList.remove(...classes);
+    if (color) {
+        document.body.classList.add('highlight-' + color);
+    }
+    // close panel
+    document.getElementById('highlightPanel').classList.remove('open');
+}
+
+function toggleHighlightPanel() {
+    document.getElementById('highlightPanel').classList.toggle('open');
+}
+
+function resetAccessibility() {
+    document.body.classList.remove(
+        "high-contrast",
+        "large-text",
+        "reduce-motion",
+        "highlight-yellow",
+        "highlight-lightgreen",
+        "highlight-darkgreen",
+        "highlight-purple",
+        "highlight-lightblue"
+    );
+    const selector = document.getElementById('highlightColor');
+    if(selector) selector.value = '';
+}
+
+/* ===================== */
+/* SECTION ANIMATION */
+/* ===================== */
+
+// scroll indicators logic
+const upIndicator = document.querySelector('.scroll-indicator.up');
+const downIndicator = document.querySelector('.scroll-indicator.down');
+
+function updateScrollIndicators() {
+    const atTop = window.scrollY <= 0;
+    const atBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight - 2;
+    upIndicator.classList.toggle('visible', !atTop);
+    downIndicator.classList.toggle('visible', !atBottom);
+}
+
+window.addEventListener('scroll', updateScrollIndicators);
+window.addEventListener('resize', updateScrollIndicators);
+// initial
+updateScrollIndicators();
+
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("show");
+    });
+}, { threshold: 0.2 });
+
+sections.forEach(section => observer.observe(section));
+
+</script>
+
