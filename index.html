@@ -155,27 +155,44 @@
     <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; text-align: center;">
         <h2>Product Development</h2>
         <div class="project-card" style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; min-height: 100vh; text-align: left;">
+            <h3>Concept</h3>
+            <p>Once the group had agreed on a general concept for the artefact, the method of mounting and support needed to be carefully considered. This led to an extended discussion, as some members preferred fixing the dispenser to a back panel, while others felt a freestanding stand would be more effective. In the end, a hybrid approach combining both methods was adopted to provide stability and practicality.</p>
+            <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 32px; margin: 24px 0; flex-wrap: wrap;">
+                <img src="images/BasePrototype3.png" style="width: 250px; max-width: 50%; height: auto; border-radius: 12px; box-shadow: 0 2px 12px #0002;" alt="Base Prototype Drawing" />
+                <p style="flex: 1; min-width: 220px; margin: 0; align-self: flex-start;">The initial drawings included a relatively large base designed to store the soap supply used by the dispenser, along with space for additional refill storage. Although this offered practical benefits, the overall size was too large to realistically fit on a standard sink area, making it impractical for everyday use.</p>
+            </div>
+            <p>As part of the functional development, the group also considered how the soap would be dispensed. A key requirement was that the system should ideally be hands-free to improve hygiene and user experience. This led to discussions around using a sensor-based mechanism, such as infrared or ultrasonic detection, or a pressure-activated system to trigger the pump without direct contact. These ideas were evaluated in terms of reliability, complexity, and ease of integration into the design. For this project, the ultrasonic sensors were selected for their ease of use.</p>
+            <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 32px; margin: 24px 0; flex-wrap: wrap;">
+                <p style="flex: 1; min-width: 220px; margin: 0; align-self: flex-start;">Alongside this, different pump mechanisms were also explored. The group considered simple manual pumps, spring-loaded systems, and small motor-driven peristaltic pumps. Each option was assessed based on cost, space requirements, and how effectively it could be concealed within the Alien-skull design. Ultimately, the chosen method was the peristaltic pump since this offered the best balance of functionality and aesthetic integration.</p>
+                <img src="images/pump1.png" style="width: 325px; max-width: 50%; height: auto; border-radius: 12px; box-shadow: 0 2px 12px #0002;" alt="Base Prototype Drawing" />
+            </div>
+            <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 32px; margin: 24px 0; flex-wrap: wrap;">
+                <img src="images/Concept Mechanism1.png" style="width: 325px; max-width: 50%; height: auto; border-radius: 12px; box-shadow: 0 2px 12px #0002;" alt="Base Prototype Drawing" />
+                <p style="flex: 1; min-width: 220px; margin: 0; align-self: flex-start;">A mechanical system for the jaw and tongue would use components such as levers, linkages, springs, or cams, offering a simpler and more reliable solution that is easier to construct and less dependent on power or programming. However, it would likely provide less precise control over movement and could be challenging to fit neatly within the limited internal space of the Alien-skull design. In contrast, an electronic system using servos, motors, or linear actuators controlled by a microcontroller would allow for smoother, more accurate, and potentially synchronised movements, improving the realism of the mechanism. By using a combination of both methods, an accurate yet reliable solution could be achieved. This mechanism would use a mechanical actuator to map the jaw rotation to the tongue extension and a motor to drive the rotation of the jaw.</p>
+            </div>
+            <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 32px; margin: 24px 0; flex-wrap: wrap;">
+                <p style="flex: 1; min-width: 220px; margin: 0; align-self: flex-start;">Following these considerations, the group moved away from the initial large-scale concept drawings and began developing a scaled physical model. This allowed the design to be better understood in terms of real-world proportions and helped identify potential issues earlier in the development process before progressing to a final prototype.</p>
+                <img src="images/Soapomorph.png" style="width: 320px; max-width: 50%; height: auto; border-radius: 12px; box-shadow: 0 2px 12px #0002;" alt="Base Prototype Drawing" />
+            </div>
 
-        <h3>Concept</h3>
-        <p>Once the group had agreed on a general concept for the artefact, the method of mounting and support needed to be carefully considered. This led to an extended discussion, as some members preferred fixing the dispenser to a back panel, while others felt a freestanding stand would be more effective. In the end, a hybrid approach combining both methods was adopted to provide stability and practicality.</p>
-        <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 32px; margin: 24px 0; flex-wrap: wrap;">
-            <img src="images/BasePrototype3.png" style="width: 250px; max-width: 50%; height: auto; border-radius: 12px; box-shadow: 0 2px 12px #0002;" alt="Base Prototype Drawing" />
-              <p style="flex: 1; min-width: 220px; margin: 0; align-self: flex-start;">The initial drawings included a relatively large base designed to store the soap supply used by the dispenser, along with space for additional refill storage. Although this offered practical benefits, the overall size was too large to realistically fit on a standard sink area, making it impractical for everyday use.</p>
-        </div>
-        <p>As part of the functional development, the group also considered how the soap would be dispensed. A key requirement was that the system should ideally be hands-free to improve hygiene and user experience. This led to discussions around using a sensor-based mechanism, such as infrared or ultrasonic detection, or a pressure-activated system to trigger the pump without direct contact. These ideas were evaluated in terms of reliability, complexity, and ease of integration into the design. For this project, the ultrasonic sensors were selected for their ease of use.</p>
-        <p>Alongside this, different pump mechanisms were also explored. The group considered simple manual pumps, spring-loaded systems, and small motor-driven peristaltic pumps. Each option was assessed based on cost, space requirements, and how effectively it could be concealed within the Alien-skull design. Ultimately, the chosen method was the peristaltic pump since this offered the best balance of functionality and aesthetic integration.</p>
-        <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 32px; margin: 24px 0; flex-wrap: wrap;">
-            <p style="flex: 1; min-width: 220px; margin: 0; align-self: flex-start;">A mechanical system for the jaw and tongue would use components such as levers, linkages, springs, or cams, offering a simpler and more reliable solution that is easier to construct and less dependent on power or programming. However, it would likely provide less precise control over movement and could be challenging to fit neatly within the limited internal space of the Xenomorph skull design. In contrast, an electronic system using servos, motors, or linear actuators controlled by a microcontroller would allow for smoother, more accurate, and potentially synchronised movements, improving the realism of the mechanism. Despite this, the electronic option introduced added complexity in terms of wiring, power supply, space requirements, and overall system reliability.</p>
-            <img src="images/Concept Mechanism1.png" style="width: 325px; max-width: 50%; height: auto; border-radius: 12px; box-shadow: 0 2px 12px #0002;" alt="Base Prototype Drawing" />
-        </div>
-        <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 32px; margin: 24px 0; flex-wrap: wrap;">
-            <img src="images/Soapomorph.png" style="width: 320px; max-width: 50%; height: auto; border-radius: 12px; box-shadow: 0 2px 12px #0002;" alt="Base Prototype Drawing" />
-            <p style="flex: 1; min-width: 220px; margin: 0; align-self: flex-start;">Following these considerations, the group moved away from the initial large-scale concept drawings and began developing a scaled physical model. This allowed the design to be better understood in terms of real-world proportions and helped identify potential issues earlier in the development process before progressing to a final prototype.</p>
-        </div>
+            <p></p>
+            <h3>Prototyping</h3>
+            <h4>2D Design</h4>
+            <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 32px; margin: 24px 0; flex-wrap: wrap;">
+                <img src="images/BaseSketch1.png" style="width: 325px; max-width: 50%; height: auto; border-radius: 12px; box-shadow: 0 2px 12px #0002;" alt="Base Prototype Drawing" />
+                <p style="flex: 1; min-width: 220px; margin: 0; align-self: flex-start;">A mechanical system for the jaw and tongue would use components such as levers, linkages, springs, or cams, offering a simpler and more reliable solution that is easier to construct and less dependent on power or programming. However, it would likely provide less precise control over movement and could be challenging to fit neatly within the limited internal space of the Alien-skull design. In contrast, an electronic system using servos, motors, or linear actuators controlled by a microcontroller would allow for smoother, more accurate, and potentially synchronised movements, improving the realism of the mechanism. By using a combination of both methods, an accurate yet reliable solution could be achieved. This mechanism would use a mechanical actuator to map the jaw rotation to the tongue extension and a motor to drive the rotation of the jaw.</p>
+            </div>
+            <h4>3D Modelling</h4>
+            <script src="https://embed.github.com/view/3d/MaximusMcGill/MaximusMcGill.github.io/main/models/MechanismV7.stl?height=438&width=438"></script>
+            
+            <h4>Physical Prototyping</h4>
+            <h5>3D Printing</h5>
+            <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 32px; margin: 24px 0; flex-wrap: wrap;">
+                <img src="images/print.jpg" style="width: 325px; max-width: 50%; height: auto; border-radius: 12px; box-shadow: 0 2px 12px #0002;" alt="Base Prototype Drawing" />
+                <p style="flex: 1; min-width: 220px; margin: 0; align-self: flex-start;"></p>
+            </div>
+            <h5>Construction</h5>
 
-        <p></p>
-        <h3>Prototyping</h3>
-        <script src="https://embed.github.com/view/3d/MaximusMcGill/MaximusMcGill.github.io/main/models/MechanismV7.stl?height=438&width=438"></script>
         </div>
     </div>
 </section>
