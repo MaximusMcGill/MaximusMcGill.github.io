@@ -180,9 +180,9 @@
             </div>
             <script src="https://embed.github.com/view/3d/MaximusMcGill/MaximusMcGill.github.io/main/models/MechanismV7.stl?height=438&width=device-width"></script>
             <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 32px; margin: 24px 0; flex-wrap: wrap;">
+                <p style="flex: 1; min-width: 220px; margin: 0; align-self: flex-start;">Fusion 360 was used separately to design the internal mechanical system responsible for actuating the jaw and tongue movement. This included the development of moving components, mounting points, and the overall layout of the mechanism within the skull structure. The modelling workflow involved repeatedly testing how the scanned skull and mechanical components would fit together, leading to several iterative revisions throughout development.“Iterative design is widely used in engineering development (Cross, 2011).”(Autodesk, 2025)</p>    
+                <span><img src="images/MechanismAnimated.gif" style="width: device-width; max-width: 50%; height: auto; border-radius: 12px; box-shadow: 0 2px 12px #0002;" /></span>
             </div>
-            <p>Fusion 360 was used separately to design the internal mechanical system responsible for actuating the jaw and tongue movement. This included the development of moving components, mounting points, and the overall layout of the mechanism within the skull structure. The modelling workflow involved repeatedly testing how the scanned skull and mechanical components would fit together, leading to several iterative revisions throughout development.“Iterative design is widely used in engineering development (Cross, 2011).”(Autodesk, 2025)</p>    
-            <span><img src="images/MechanismAnimated.gif" style="width: device-width; max-width: 95%; height: auto; border-radius: 12px; box-shadow: 0 2px 12px #0002;" /></span>
             <p>Scaling issues became an important consideration, as the scanned skull model and the mechanism created in Fusion 360 needed to match accurately in size and proportion. Tolerances also had to be considered carefully to ensure moving parts would function correctly once manufactured, particularly due to the inaccuracies that can occur during 3D printing. In addition, the final model was divided into multiple sections to fit within the limitations of the available 3D printer build volume and to make assembly easier during prototyping.</p>
             
             <h4>Physical Prototyping</h4>
@@ -202,6 +202,7 @@
                 <span><img src="images/SkullAnimated.gif" style="width: 325px; max-width: 80%; height: auto; border-radius: 12px; box-shadow: 0 2px 12px #0002;" /></span>
                 <p style="flex: 1; min-width: 220px; margin: 0; align-self: flex-start;">A digital simulation was developed to demonstrate the intended mechanical functionality of the design. The simulation was used to showcase the movement of the jaw and tongue actuation system, allowing the group to present how the mechanism would operate within the completed alien-skull soap dispenser. This approach provided a practical alternative to a fully assembled prototype, as it allowed the key mechanical concepts and movement sequences to be tested and visualised without requiring final physical manufacture. The simulation also demonstrated the integration between the structural design and the internal mechanism, helping validate the overall functionality of the project despite the incomplete physical artefact.</p>
             </div>
+            
         </div>
     </div>
 </section>
@@ -443,7 +444,15 @@ const observer = new IntersectionObserver(entries => {
     });
 }, { threshold: 0.2 });
 
-sections.forEach(section => observer.observe(section));
+sections.forEach(section => {
+    observer.observe(section);
+    
+    // Check if section is already in viewport on page load
+    const rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+        section.classList.add("show");
+    }
+});
 
 </script>
 
